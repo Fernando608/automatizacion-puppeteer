@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git 'https://github.com/Fernando608/automatizacion-puppeteer.git'
+                git branch: 'main', url: 'https://github.com/Fernando608/automatizacion-puppeteer.git'
             }
         }
         stage('Instalar dependencias') {
