@@ -6,7 +6,11 @@ pipeline {
     }	
 
     stages {
-
+        stage('Checkout') {
+            steps {
+                git 'https://github.com/Fernando608/automatizacion-puppeteer.git'
+            }
+        }
         stage('Instalar dependencias') {
             steps {
                 sh 'npm install'
@@ -15,11 +19,6 @@ pipeline {
         stage('Ejecutar pruebas') {
             steps {
                 sh 'npm test'
-            }
-        }
-        stage('Publicar resultados (opcional)') {
-            steps {
-                echo 'Resultados de las pruebas disponibles en la consola'
             }
         }
     }
