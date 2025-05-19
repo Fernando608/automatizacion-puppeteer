@@ -6,11 +6,7 @@ pipeline {
     }	
 
     stages {
-        stage('Checkout') {
-            steps {
 
-            }
-        }
         stage('Instalar dependencias') {
             steps {
                 sh 'npm install'
